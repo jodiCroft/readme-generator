@@ -8,7 +8,7 @@ const Header = () => {
         Create a README.md for your project using this simple template. See the
         preview of the markdown as you edit!
       </h5>
-      <button className="GetStartedButton">Get Started!</button>
+      {/* <button className="GetStartedButton">Get Started!</button> */}
     </div>
   );
 };

@@ -15,6 +15,7 @@ function App() {
   
   \`\`\`
   pip install foobar
+  \`\`\`
   `);
 
   const handleChange = (e) => {
@@ -28,9 +29,9 @@ function App() {
         <Markdown text={text} handleChange={handleChange} />
         <Preview text={text} />
       </div>
-      <div>
+      <div className="Footer">
         When you're happy with the preview, copy the markdown text (on the left)
-        to paste into your text editor!
+        to paste into your text editor or your project repo!
       </div>
     </div>
   );
