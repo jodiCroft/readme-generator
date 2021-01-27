@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 const Markdown = ({ text, handleChange }) => {
   return (
-    <div className="MarkdownArea">
-      <h3 className="TemplateTitle">Type markdown text here</h3>
-
+    <div className="TemplateArea">
+      <div className="TitleWrapper">
+        <h3 className="MarkdownTitle">Type markdown text here</h3>
+      </div>
       <div className="MarkdownPage">
         <textarea
           className="MarkdownInput"
