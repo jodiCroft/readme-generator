@@ -6,6 +6,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #f5f0e1;
+}
+
+.App {
+  margin: 0;
 }
 
 .Header {
@@ -14,10 +19,23 @@ body {
   align-items: center;
   margin-top: 4%;
   margin-bottom: 3%;
+  background-color: #1e3d59;
+  box-shadow: 0.5px 3px 10px rgb(119, 106, 65);
 }
 
 .Subheader {
   margin-top: 2%;
+  background-color: #1e3d59;
+  margin-bottom: 3%;
+  color: #f5f0e1;
+  font-size: 15px;
+}
+
+.SiteTitle {
+  margin-top: 3%;
+  background-color: #1e3d59;
+  color: #f5f0e1;
+  font-size: 50px;
 }
 
 /* .GetStartedButton {
@@ -40,15 +58,17 @@ body {
 
 .MarkdownInput {
   border: 1px solid black;
-  overflow: auto;
+  /* overflow: auto; */
   outline: none;
   box-shadow: none;
   resize: none;
   min-height: 50vh;
+  height: fit-content;
   border-radius: 10px;
   padding: 4%;
   min-width: 40vw;
-  margin: 5%;
+  /* margin: 0 5%; */
+  background-color: #fffffff6;
 }
 
 .MarkdownInput::-webkit-scrollbar {
@@ -58,6 +78,11 @@ body {
 .TemplateContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: 3%;
+}
+
+.TemplateArea {
+  margin: 0 5%;
 }
 
 .PreviewOutput {
@@ -66,7 +91,53 @@ body {
   min-width: 40vw;
   border-radius: 10px;
   padding: 3%;
-  margin: 5%;
+  /* margin: 0 5%; */
+  background-color: #fffffff6;
+}
+
+.PreviewOutput h1,
+.PreviewOutput h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.PreviewOutput p {
+  font-size: 16px;
+}
+
+.PreviewOutput h1,
+.PreviewOutput h2,
+.PreviewOutput h3,
+.PreviewOutput h4,
+.PreviewOutput h5,
+.PreviewOutput h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: rgb(245, 130, 23);
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ff6e40;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.PreviewOutput pre {
+  width: 100%;
+  background: rgb(236, 250, 255);
+  padding: 3%;
+  border: none;
+  border-radius: 10px;
+  margin: 2% 0;
 }
 
 .Footer {
