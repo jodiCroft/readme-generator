@@ -3,6 +3,13 @@ import React from "react";
 const Header = () => {
   return (
     <div className="HeaderWrapper">
+      <img
+        className="Logo"
+        src="https://i.imgur.com/CD05ted.png"
+        height="10%"
+        width="10%"
+        alt="create readme logo"
+      />
       <div className="Header">
         <h1 className="SiteTitle">README Generator</h1>
         <h5 className="Subheader">

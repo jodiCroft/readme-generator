@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import TextareaAutosize from "react-textarea-autosize";
 
 const Markdown = ({ text, handleChange }) => {
   return (
@@ -6,13 +7,11 @@ const Markdown = ({ text, handleChange }) => {
       <div className="TitleWrapper">
         <h3 className="MarkdownTitle">Type markdown text here</h3>
       </div>
-      <div className="MarkdownPage">
-        <textarea
-          className="MarkdownInput"
-          value={text}
-          onChange={(e) => handleChange(e)}
-        ></textarea>
-      </div>
+      <TextareaAutosize
+        className="MarkdownInput"
+        value={text}
+        onChange={(e) => handleChange(e)}
+      />
     </div>
   );
 };
