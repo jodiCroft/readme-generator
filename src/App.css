@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4%;
   margin-bottom: 3%;
   background-color: #1e3d59;
   box-shadow: 0.5px 3px 10px rgb(119, 106, 65);
@@ -38,10 +37,6 @@ body {
   font-size: 50px;
 }
 
-/* .GetStartedButton {
-  padding: 0.5%;
-} */
-
 .TitleWrapper {
   text-align: center;
 }
@@ -58,16 +53,14 @@ body {
 
 .MarkdownInput {
   border: 1px solid black;
-  /* overflow: auto; */
   outline: none;
-  box-shadow: none;
+  box-shadow: 0.5px 3px 5px rgb(119, 106, 65);
   resize: none;
   min-height: 50vh;
+  width: 45vw;
   height: fit-content;
   border-radius: 10px;
   padding: 4%;
-  min-width: 40vw;
-  /* margin: 0 5%; */
   background-color: #fffffff6;
 }
 
@@ -82,16 +75,16 @@ body {
 }
 
 .TemplateArea {
-  margin: 0 5%;
+  margin: 0 2%;
 }
 
 .PreviewOutput {
   border: 1px solid black;
   min-height: 50vh;
-  min-width: 40vw;
+  width: 45vw;
   border-radius: 10px;
+  box-shadow: 0.5px 3px 5px rgb(119, 106, 65);
   padding: 3%;
-  /* margin: 0 5%; */
   background-color: #fffffff6;
 }
 
@@ -118,12 +111,12 @@ body {
 }
 
 a {
-  color: rgb(245, 130, 23);
+  color: #0366d6;
   text-decoration: none;
 }
 
 a:visited {
-  color: #ff6e40;
+  color: #0366d6;
   text-decoration: none;
 }
 
@@ -145,6 +138,11 @@ a:hover {
   justify-content: center;
   margin-top: 0;
   margin-bottom: 3%;
-  padding-top: 0;
+  padding-top: 3%;
   padding-bottom: 3%;
+  font-size: larger;
+  width: 100%;
+  background: #1e3d59;
+  color: #f5f0e1;
+  box-shadow: 0.5px 3px 10px rgb(119, 106, 65);
 }
