@@ -5,6 +5,7 @@ import Markdown from "./Components/Markdown";
 import Preview from "./Components/Preview";
 
 function App() {
+  let textAreaHeight = 50;
   const [text, setText] = useState(`# Foobar
 
   Foobar is a Python library for dealing with word pluralization.
@@ -20,6 +21,10 @@ function App() {
 
   const handleChange = (e) => {
     setText(e.target.value);
+    let maxHeight = Infinity;
+    let textAreaRows = e.target.value.split("\n");
+    console.log(textAreaRows.length);
+    // if(textAreaRows != "undefined" && textAreaRows.length < maxHeight)
   };
 
   return (

@@ -7,10 +7,8 @@ const Preview = ({ text }) => {
       <div className="TitleWrapper">
         <h3 className="PreviewTitle">See preview here</h3>
       </div>
-      <div className="PreviewPage">
-        <div className="PreviewOutput">
-          <ReactMarkdown>{text}</ReactMarkdown>
-        </div>
+      <div className="PreviewOutput">
+        <ReactMarkdown>{text}</ReactMarkdown>
       </div>
     </div>
   );
