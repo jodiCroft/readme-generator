@@ -9,9 +9,33 @@ body {
   background-color: #f5f0e1;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 .App {
   margin: 0;
 }
+
+.NavWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .GithubLink {
+} */
+
+.Logo {
+  /* margin-right: 10%; */
+  height: 100%;
+}
+
+/* .LinkToCheat {
+  margin-left: 10%;
+} */
 
 .Header {
   display: flex;
@@ -90,14 +114,22 @@ body {
   overflow-wrap: break-word;
 }
 
-/* .CodePreview {
-  min-width: fit-content;
-} */
-
 .PreviewOutput h1,
 .PreviewOutput h2 {
   padding-bottom: 0.3em;
   border-bottom: 1px solid #eaecef;
+}
+
+.PreviewOutput blockquote,
+.PreviewOutput dl,
+.PreviewOutput ol,
+.PreviewOutput p,
+.PreviewOutput pre,
+.PreviewOutput table,
+.PreviewOutput ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 300;
 }
 
 .PreviewOutput p {
@@ -132,7 +164,6 @@ a:hover {
 
 .PreviewOutput pre {
   width: 100%;
-  /* min-width: fit-content; */
   background: rgb(236, 250, 255);
   padding: 3%;
   border: none;
@@ -140,18 +171,24 @@ a:hover {
   margin: 2% 0;
   display: inline-block;
   white-space: pre-wrap;
-  /* overflow-y: hidden;
-  overflow: scroll; */
-
-  /* TEXT IS OVERFLOWING - WHY?!?!?!?!?!? */
+  font-size: 14px;
 }
 
 .PreviewOutput code {
   width: 100%;
 }
 
-.Code {
-  /* width: 100%; */
+.PreviewOutput ul {
+  margin-left: 5%;
+}
+.PreviewOutput ol {
+  margin-left: 5%;
+}
+
+.PreviewOutput blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
 }
 
 .Footer {
