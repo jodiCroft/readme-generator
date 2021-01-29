@@ -5,60 +5,73 @@ import Markdown from "./Components/Markdown";
 import Preview from "./Components/Preview";
 
 function App() {
-  const [text, setText] = useState(`# One Liner Project
+  const [text, setText] = useState(`# dad-jokes
 
-  A simple Node Module which can provide one line joke randomly or from specific tag. This module contains more than 2200 one line jokes.
+  > Everybody loves dad jokes... right?
   
-  ## Installation
+  ![dadjoke](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1zVXeNGtMirZcDSAD84gq_DDFfPH-Zw7n2Q&usqp=CAU)
   
-  Use the package manager [npm](https://docs.npmjs.com/) to install and save.
+  The jokes list is just a [JSON file](jokes.json) and can be used wherever. PRs welcome if you've got a good dad joke!
   
-  \`\`\` bash
-  npm install one-liner-joke --save
+  ## Install
+  
   \`\`\`
+  $ npm install --save @mikemcbride/dad-jokes
+  \`\`\`
+  
   
   ## Usage
   
-  \`\`\` var oneLinerJoke = require('one-liner-joke');
-
-  /*
-  The variable getRandomJoke will contain a random joke with a format:
-  {"body":"Artificial intelligence is no match for natural stupidity.","tags":["intelligence","stupid"]}
-  */
-  var getRandomJoke = oneLinerJoke.getRandomJoke();
-  console.log(getRandomJoke)
+  \`\`\`js
+  const dadJokes = require('dad-jokes');
   
-  /*
-  One can add exclusion filter for the jokes tags
-  default is ['racist', 'dirty', 'sex']
-  */
-  var getRandomJoke = oneLinerJoke.getRandomJoke({
-      'exclude_tags': ['dirty', 'racist', 'marriage']
-    });
-  console.log(getRandomJoke)
-  
-  
-  /*
-  The variable getRandomJoke will contain a random joke with a tag and with a format:
-  {"body":"Artificial intelligence is no match for natural stupidity.","tags":["intelligence","stupid"]}
-  */
-  
-  var getRandomJokeWithTag = oneLinerJoke.getRandomJokeWithTag('stupid');
-  console.log(getRandomJokeWithTag)
-  
-  /*
-  One can add exclusion filter for the jokes tags
-  default is ['racist', 'dirty', 'sex']
-  */
-  var getRandomJoke = oneLinerJoke.getRandomJokeWithTag('stupid', {
-    'exclude_tags': ['dirty', 'racist', 'marriage']
-  });
-  console.log(getRandomJoke)
+  dadJokes.random();
+  //=> 'The shovel was a ground-breaking invention.'
   \`\`\`
   
   
-  ## Repository
-  [Github](https://github.com/faiyaz26/one-liner-joke)
+  ## API
+  
+  ### .all
+  
+  Type: \`\`\` array \`\`\`
+  
+  All the dad jokes we have.
+  
+  ### .random()
+  
+  Type: \`\`\` function \`\`\`
+  
+  Random dad joke from the list.
+  
+  
+  ## CLI
+  
+  \`\`\`
+  $ npm install --global @mikemcbride/dad-jokes
+  \`\`\`
+  
+  \`\`\`
+  $ dad-jokes --help
+  
+    Examples
+      $ dad-jokes
+      The shovel was a ground-breaking invention.
+  
+      $ dad-jokes --all
+      Did you hear about the restaurant on the moon? Great food, no atmosphere.
+      What do you call a fake noodle? An impasta.
+      How many apples grow on a tree? All of them.
+      ...
+  
+    Options
+      --all   Get all jokes instead of a random joke
+  \`\`\`
+  
+  ## License
+  
+  MIT © [Mike McBride](https://mikemcbride.dev)
+  
   `);
 
   const handleChange = (e) => {
