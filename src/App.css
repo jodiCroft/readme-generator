@@ -58,7 +58,6 @@ body {
   resize: none;
   min-height: 50vh;
   width: 45vw;
-  height: fit-content;
   border-radius: 10px;
   padding: 4%;
   background-color: #fffffff6;
@@ -81,12 +80,19 @@ body {
 .PreviewOutput {
   border: 1px solid black;
   min-height: 50vh;
-  width: 45vw;
+  min-width: 45vw;
+  display: inline-block;
   border-radius: 10px;
   box-shadow: 0.5px 3px 5px rgb(119, 106, 65);
   padding: 3%;
   background-color: #fffffff6;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
+
+/* .CodePreview {
+  min-width: fit-content;
+} */
 
 .PreviewOutput h1,
 .PreviewOutput h2 {
@@ -126,11 +132,26 @@ a:hover {
 
 .PreviewOutput pre {
   width: 100%;
+  /* min-width: fit-content; */
   background: rgb(236, 250, 255);
   padding: 3%;
   border: none;
   border-radius: 10px;
   margin: 2% 0;
+  display: inline-block;
+  white-space: pre-wrap;
+  /* overflow-y: hidden;
+  overflow: scroll; */
+
+  /* TEXT IS OVERFLOWING - WHY?!?!?!?!?!? */
+}
+
+.PreviewOutput code {
+  width: 100%;
+}
+
+.Code {
+  /* width: 100%; */
 }
 
 .Footer {
