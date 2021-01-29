@@ -5,35 +5,60 @@ import Markdown from "./Components/Markdown";
 import Preview from "./Components/Preview";
 
 function App() {
-  const [text, setText] = useState(`# Foobar
+  const [text, setText] = useState(`# One Liner Project
 
-  Foobar is a Python library for dealing with word pluralization.
+  A simple Node Module which can provide one line joke randomly or from specific tag. This module contains more than 2200 one line jokes.
   
   ## Installation
   
-  Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+  Use the package manager [npm](https://docs.npmjs.com/) to install and save.
   
   \`\`\` bash
-  pip install foobar
+  npm install one-liner-joke --save
   \`\`\`
   
   ## Usage
   
-  \`\`\` python
-  import foobar
+  \`\`\` var oneLinerJoke = require('one-liner-joke');
+
+  /*
+  The variable getRandomJoke will contain a random joke with a format:
+  {"body":"Artificial intelligence is no match for natural stupidity.","tags":["intelligence","stupid"]}
+  */
+  var getRandomJoke = oneLinerJoke.getRandomJoke();
+  console.log(getRandomJoke)
   
-  foobar.pluralize('word') # returns 'words'
-  foobar.pluralize('goose') # returns 'geese'
-  foobar.singularize('phenomena') # returns 'phenomenon'
+  /*
+  One can add exclusion filter for the jokes tags
+  default is ['racist', 'dirty', 'sex']
+  */
+  var getRandomJoke = oneLinerJoke.getRandomJoke({
+      'exclude_tags': ['dirty', 'racist', 'marriage']
+    });
+  console.log(getRandomJoke)
+  
+  
+  /*
+  The variable getRandomJoke will contain a random joke with a tag and with a format:
+  {"body":"Artificial intelligence is no match for natural stupidity.","tags":["intelligence","stupid"]}
+  */
+  
+  var getRandomJokeWithTag = oneLinerJoke.getRandomJokeWithTag('stupid');
+  console.log(getRandomJokeWithTag)
+  
+  /*
+  One can add exclusion filter for the jokes tags
+  default is ['racist', 'dirty', 'sex']
+  */
+  var getRandomJoke = oneLinerJoke.getRandomJokeWithTag('stupid', {
+    'exclude_tags': ['dirty', 'racist', 'marriage']
+  });
+  console.log(getRandomJoke)
   \`\`\`
   
-  ## Contributing
-  Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
   
-  Please make sure to update tests as appropriate.
-  
-  ## License
-  [MIT](https://choosealicense.com/licenses/mit/)
+  ## Repository
+  [Github](https://github.com/faiyaz26/one-liner-joke)
   `);
 
   const handleChange = (e) => {
