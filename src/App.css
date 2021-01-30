@@ -20,22 +20,26 @@ html {
 
 .NavWrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* .GithubLink {
-} */
-
-.Logo {
-  /* margin-right: 10%; */
-  height: 100%;
+.GithubLink {
+  display: inline-block;
+  height: 12%;
+  width: 12%;
+  margin-right: 35%;
+  margin-bottom: 0;
 }
 
-/* .LinkToCheat {
-  margin-left: 10%;
-} */
+.Logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.LinkToCheat {
+  margin-left: 35%;
+}
 
 .Header {
   display: flex;
