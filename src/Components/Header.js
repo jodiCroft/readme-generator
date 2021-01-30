@@ -13,10 +13,9 @@ const Header = () => {
             src="https://i.imgur.com/CD05ted.png"
             className="Logo"
             alt="create-readme-logo"
-            height="12%"
-            width="12%"
           />
         </a>
+
         <a
           className="LinkToCheat"
           href="https://www.markdownguide.org/cheat-sheet/"
